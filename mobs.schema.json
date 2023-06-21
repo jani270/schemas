@@ -1,0 +1,256 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "type": "object",
+    "properties": {
+        "entity": {
+            "type": "string",
+            "enum": [
+                "Zombie",
+                "Chicken",
+                "Slime",
+                "Wolf",
+                "Skeleton",
+                "Creeper",
+                "Ocelot",
+                "Blaze",
+                "Rabbit",
+                "Sheep",
+                "Horse",
+                "Eisengolem",
+                "Silverfish",
+                "Witch",
+                "Endermite",
+                "Snowman",
+                "Villager",
+                "Guardian",
+                "ArmorStand",
+                "Squid",
+                "Bat",
+                "Spider",
+                "CaveSpider",
+                "Pigman",
+                "Ghast",
+                "MagmaCube",
+                "Wither",
+                "Enderman",
+                "Mooshroom",
+                "WitherSkeleton",
+                "Cow",
+                "Dragon",
+                "Player",
+                "Pig"
+            ]
+        },
+        "modifiers": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "age"
+                            },
+                            "baby": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "type"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "horse"
+                            },
+                            "kind": {
+                                "enum": [
+                                    "skeleton",
+                                    "zombie",
+                                    "mule",
+                                    "donkey",
+                                    "horse"
+                                ]
+                            },
+                            "armor": {
+                                "enum": [
+                                    "iron",
+                                    "golden",
+                                    "diamond"
+                                ]
+                            },
+                            "saddled": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "type"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "name"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "type"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "playerdata"
+                            },
+                            "cape": {
+                                "type": "string"
+                            },
+                            "skin": {
+                                "type": "string"
+                            },
+                            "slim": {
+                                "type": "boolean"
+                            },
+                            "parts": {
+                                "anyOf": [
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "CAPE": {
+                                                "type": "boolean"
+                                            },
+                                            "JACKET": {
+                                                "type": "boolean"
+                                            },
+                                            "LEFT_SLEEVE": {
+                                                "type": "boolean"
+                                            },
+                                            "RIGHT_SLEEVE": {
+                                                "type": "boolean"
+                                            },
+                                            "RIGHT_PANTS_LEG": {
+                                                "type": "boolean"
+                                            },
+                                            "LEFT_PANTS_LEG": {
+                                                "type": "boolean"
+                                            },
+                                            "HAT": {
+                                                "type": "boolean"
+                                            }
+                                        },
+                                        "additionalProperties": false,
+                                        "required": []
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "type"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "equipment"
+                            },
+                            "helmet": {
+                                "type": "string"
+                            },
+                            "hand": {
+                                "type": "string"
+                            },
+                            "chestplate": {
+                                "type": "string"
+                            },
+                            "leggings": {
+                                "type": "string"
+                            },
+                            "feet": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "type"
+                        ]
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "riding"
+                            }
+                        },
+                        "allOf": [
+                            {
+                                "$ref": "#"
+                            }
+                        ],
+                        "required": [
+                            "type"
+                        ]
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "charged"
+                            }
+                        },
+                        "required": [
+                            "charged"
+                        ]
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "witherdata"
+                            },
+                            "tiny": {
+                                "type": "boolean"
+                            },
+                            "armored": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "type"
+                        ]
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "const": "invisible"
+                            },
+                            "invisible": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": ["type"]
+                    }
+                ]
+            }
+        }
+    },
+    "required": [
+        "entity"
+    ]
+}
