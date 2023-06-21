@@ -188,7 +188,8 @@
                         },
                         "required": [
                             "type"
-                        ]
+                        ],
+                        "additionalProperties": false
                     },
                     {
                         "type": "object",
@@ -204,7 +205,8 @@
                         ],
                         "required": [
                             "type"
-                        ]
+                        ],
+                        "additionalProperties": false
                     },
                     {
                         "type": "object",
@@ -215,7 +217,8 @@
                         },
                         "required": [
                             "charged"
-                        ]
+                        ],
+                        "additionalProperties": false
                     },
                     {
                         "type": "object",
@@ -232,7 +235,8 @@
                         },
                         "required": [
                             "type"
-                        ]
+                        ],
+                        "additionalProperties": false
                     },
                     {
                         "type": "object",
@@ -244,7 +248,8 @@
                                 "type": "boolean"
                             }
                         },
-                        "required": ["type"]
+                        "required": ["type"],
+                        "additionalProperties": false
                     }
                 ]
             }
