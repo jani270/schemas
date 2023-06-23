@@ -314,7 +314,7 @@
 								"type": "integer",
 								"description": "Amount of coins needed for the upgrade \"at level 0\" (without any cost reductions)"
 							},
-							"duration": {
+							"time": {
 								"type": "integer",
 								"description": "Time needed for the upgrade in seconds"
 							}
