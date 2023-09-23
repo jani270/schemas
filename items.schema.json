@@ -252,6 +252,25 @@
 							},
 							"panorama": {
 								"type": "string",
+								"enum": [
+									"dynamic",
+									"hub",
+									"mining_1",
+									"mining_2",
+									"mining_3",
+									"combat_1",
+									"crimson_isle",
+									"combat_3",
+									"farming_1",
+									"foraging_1",
+									"winter",
+									"dungeon",
+									"dungeon_hub",
+									"crystal_hollows",
+									"instanced",
+									"garden",
+									"rift"
+								],
 								"description": "The /locraw name of the panorama to use for displaying as a background"
 							}
 						},
