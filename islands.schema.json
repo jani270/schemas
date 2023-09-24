@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://notenoughupdates.org/schemas/islands.schema.json",
+    "description": "Information about islands, warps and teleports in Hypixel",
+    "type": "object",
+    "properties": {
+        "area_names": {
+            "description": "User friendly names for locraw locations",
+            "type": "object",
+            "additionalProperties": {
+                "type": "string"
+            }
+        },
+        "teleporters": {
+            "type": "array",
+            "description": "List of teleporters",
+            "items": {
+                "description": "A teleporter",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "from": {
+                        "type": "string",
+                        "description": "The island you are warping from"
+                    },
+                    "to": {
+                        "type": "string",
+                        "description": "The island you are warping to"
+                    },
+                    "x": {
+                        "type": "number",
+                        "description": "the X coordinate of the entrypoint to the teleporter"
+                    },
+                    "y": {
+                        "type": "number",
+                        "description": "the Y coordinate of the entrypoint to the teleporter"
+                    },
+                    "z": {
+                        "type": "number",
+                        "description": "the Z coordinate of the entrypoint to the teleporter"
+                    }
+                },
+                "required": [
+                    "from",
+                    "to",
+                    "x",
+                    "y",
+                    "z"
+                ]
+            }
+        },
+        "island_warps": {
+            "type": "array",
+            "description": "List of warp commands",
+            "items": {
+                "properties": {
+                    "warp": {
+                        "type": "string",
+                        "description": "The warp command"
+                    },
+                    "mode": {
+                        "type": "string",
+                        "description": "The locraw name of the target island"
+                    },
+                    "aliases": {
+                        "type": "array",
+                        "description": "List of aliases that can also be used as a warp command",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "x": {
+                        "type": "number",
+                        "description": "The location of the destination"
+                    },
+                    "y": {
+                        "type": "number",
+                        "description": "The location of the destination"
+                    },
+                    "z": {
+                        "type": "number",
+                        "description": "The location of the destination"
+                    }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                    "warp",
+                    "mode",
+                    "x",
+                    "y",
+                    "z"
+                ]
+            }
+        }
+    },
+    "required": [
+        "area_names",
+        "teleporters",
+        "island_warps"
+    ],
+    "additionalProperties": false
+}
