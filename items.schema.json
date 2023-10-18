@@ -398,6 +398,7 @@
 		"displayname",
 		"nbttag",
 		"damage",
-		"lore"
+		"lore",
+        "internalname"
 	]
 }
