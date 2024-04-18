@@ -269,7 +269,8 @@
 									"crystal_hollows",
 									"instanced",
 									"garden",
-									"rift"
+									"rift",
+									"mineshaft"
 								],
 								"description": "The /locraw name of the panorama to use for displaying as a background"
 							}
