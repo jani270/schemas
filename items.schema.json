@@ -104,7 +104,7 @@
 								"description": "Set to override the internalName of the resulting item"
 							},
 							"count": {
-								"type": "integer",
+								"type": "number",
 								"minimum": 1,
 								"description": "Set to override the amount of resulting items"
 							},
