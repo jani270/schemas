@@ -35,6 +35,10 @@
 				"overrideOutputId": {
 					"type": "string",
 					"description": "Set to override the internalName of the resulting item"
+				},
+				"supercraftable": {
+					"type": "boolean",
+					"description": "Shows that this recipe can be supercrafted, even if the item should not allow it."
 				}
 			},
 			"required": [
